@@ -1,10 +1,10 @@
 FactoryBot.define do
   factory :ticket do
-    title { "MyString" }
-    description { "MyText" }
-    due_date { "2025-07-04" }
-    status_id { 1 }
-    progress { 1 }
-    user { nil }
+    title { Faker::Appliance.brand }
+    description { Faker::Appliance.equipment }
+    due_date { Faker::Date.forward }
+    status_id { 0 }
+    progress { 0 }
+    association :assigned_user, factory: :user
   end
 end
