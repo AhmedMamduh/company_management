@@ -7,6 +7,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.integer :due_date_reminder_interval, default: 0
       t.time :due_date_reminder_time
       t.string :time_zone, default: 'Europe/Vienna'
+      t.integer :reminder_channel, default: 0
     end
   end
 end

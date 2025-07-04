@@ -20,8 +20,8 @@ ActiveRecord::Schema.define(version: 2025_07_04_181301) do
     t.text "description", null: false
     t.date "due_date", null: false
     t.integer "status_id"
-    t.integer "progress"
-    t.integer "assigned_user_id"
+    t.integer "progress", default: 0
+    t.integer "assigned_user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 2025_07_04_181301) do
     t.integer "due_date_reminder_interval", default: 0
     t.time "due_date_reminder_time"
     t.string "time_zone", default: "Europe/Vienna"
+    t.integer "reminder_channel", default: 0
   end
 
 end
